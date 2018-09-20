@@ -8,20 +8,20 @@
             {% csrf_token %}
             <div class="card-body">
                 <div class="row">
-                    <div class = "col col-md-3"><label for="basic-url">Місце реєстрації авто</label></div>
-                    <div class = "col col-md-3">{{ form.setlCalc }}</div>
+                    <div class = "col col-md-4"><label>Місце реєстрації авто</label></div>
+                    <div class = "col col-md-4">{{ form.setlCalc }}</div>
                 </div>
             </div>
             <div class="card-body">
                 <div class="row">
-                    <div class = "col col-md-3"><label for="basic-url">Тип траспорного засобу</label></div>
-                    <div class = "col col-md-3">{{ form.catTypeCalc }}</div>
+                    <div class = "col col-md-4"><label>Тип траспорного засобу</label></div>
+                    <div class = "col col-md-4">{{ form.catTypeCalc }}</div>
                 </div>
             </div>
             <div class="card-body">
                 <div class="row">
-                    <div class = "col col-md-3"><label for="basic-url">Ціна</label></div>
-                    <div class = "col col-md-3">{{ form.price }}</div>
+                    <div class = "col col-md-4"><label>Ціна</label></div>
+                    <div class = "col col-md-4">{{ form.price }}</div>
                 </div>
             </div>
             <button type="submit" class="save btn btn-primary btn-lg" style="background: #1d2124; margin-top: 40px">Продовжити оформлення</button>
