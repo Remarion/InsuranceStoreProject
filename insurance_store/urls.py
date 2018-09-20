@@ -17,11 +17,12 @@ Including another URLconf
 from django.contrib import admin
 from django.conf.urls import url
 from ocv.views import Index, OCV_View
+from ocv import views
 from tourism.views import Tourism_View
 
 urlpatterns = [
     url(r'admin/', admin.site.urls),
     url(r'^$', Index.as_view(), name = 'main'),
-    url(r'^ocv/', OCV_View.as_view(), name = 'ocv'),
+    url(r'^ocv/', OCV_View.as_view(), name = 'calcOCV_new'),
     url(r'^tourism/', Tourism_View.as_view(), name = 'tourism'),
 ]

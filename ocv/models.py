@@ -14,7 +14,7 @@ class Settlement(models.Model):
     settlementMTSBUCode = models.CharField(max_length=10)
 
     def __str__(self):
-        return self.settlementName + " " + self.settlementRegion
+        return self.settlementName + ", " + self.settlementRegion
 
 class CarType(models.Model):
     carType = models.CharField(max_length=50)
