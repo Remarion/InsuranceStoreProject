@@ -1,11 +1,25 @@
 {% extends "wrapper.html" %}
 
 {% block content %}
-    <h1>Розрахуйте вартість свого полісу ОЦВ</h1>
-    <form method="POST" class="post-form">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit" class="save btn btn-primary btn-lg" style="background: #1d2124">Розрахувати</button>
-    </form>
+
+    <h2>Розрахуйте вартість страхування свого авто</h2>
+    <div class="container card-body">
+        <form method="POST" class="post-form">
+            {% csrf_token %}
+            <div class="card-body">
+                <label for="basic-url">Місце реєстрації авто</label>
+                {{ form.setlCalc }}
+            </div>
+            <div class="card-body">
+                <label for="basic-url">Тип траспорного засобу</label>
+                {{ form.catTypeCalc }}
+            </div>
+            <div class="card-body">
+                <label for="basic-url">Ціна</label>
+                {{ form.price }}
+            </div>
+            <button type="submit" class="save btn btn-primary btn-lg" style="background: #1d2124; margin-top: 40px">Продовжити оформлення</button>
+        </form>
+    </div>
   
 {% endblock %}
