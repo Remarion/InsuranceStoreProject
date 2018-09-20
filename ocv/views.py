@@ -12,7 +12,10 @@ class Index(View):
 
 class OCV_View(View):
     def get(self, request):
-        form = CalculationOCVForm(request.POST)
+        if request.method == 'POST':
+            form = CalculationOCVForm(request.POST)
+        else:
+            form = CalculationOCVForm()
         return render(request, 'ocv.html', {'form': form})
 
 
