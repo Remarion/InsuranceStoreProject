@@ -2,13 +2,16 @@
 from django.shortcuts import render
 from django.views import View
 from .forms import CalculationOCVForm
+from .models import CarTypeMTSBU
+
 
 # Create your views here.
 
 class Index(View):
     def get(self, request):
-        context = {'text':'Main page'}
+        context = {'text': 'Main page'}
         return render(request, 'basic.html', context)
+
 
 class OCV_View(View):
     def get(self, request):
@@ -17,6 +20,3 @@ class OCV_View(View):
         else:
             form = CalculationOCVForm()
         return render(request, 'ocv.html', {'form': form})
-
-
-

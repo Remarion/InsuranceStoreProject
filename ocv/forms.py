@@ -6,9 +6,9 @@ from .models import CalculationOCV
 class CalculationOCVForm(forms.ModelForm):
     class Meta:
         model = CalculationOCV
-        fields = ('setlCalc', 'catTypeCalc', 'price')
+        fields = ('setlCalc', 'catTypeSimpleCalc', 'carTypeLabelCalc', 'carTypeMTSBUCalc')
         widgets = {
             'setlCalc': Select(attrs={"class": "form-control", "type": "text", "placeholder": "Default input"}),
-            'catTypeCalc': Select(attrs={"class": "form-control", "type": "text", "placeholder": "Default input"}),
-            'price': TextInput(attrs={"class": "form-control", "type": "text"})
+            'catTypeSimpleCalc': Select(attrs={"class": "form-control", "type": "text", "placeholder": "Default input"}),
+            'carTypeMTSBUCalc': Select(attrs={"class": "form-control", "type": "text", "placeholder": "Default input"}),
         }
