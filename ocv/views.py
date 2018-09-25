@@ -2,10 +2,7 @@
 from django.shortcuts import render
 from django.views import View
 from .forms import CalculationOCVForm
-from .models import CarTypeMTSBU
 
-
-# Create your views here.
 
 class Index(View):
     def get(self, request):
