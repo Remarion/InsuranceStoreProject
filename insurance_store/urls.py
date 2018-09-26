@@ -3,8 +3,6 @@
 from django.contrib import admin
 from django.conf.urls import url, include
 from ocv.views import Index
-#from django.urls import include, path
-
 
 urlpatterns = [
      url(r'admin/', admin.site.urls),

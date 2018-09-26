@@ -8,3 +8,4 @@ class Tourism_View(View):
     def get(self, request):
         context = {'text':'Main page'}
         return render(request, 'tourism.html', context)
+
