@@ -9,6 +9,7 @@ class CalculationOCVForm(forms.ModelForm):
         fields = ('setlCalc', 'catTypeSimpleCalc', 'carTypeLabelCalc', 'carTypeMTSBUCalc')
         widgets = {
             'setlCalc': Select(attrs={"class": "form-control", "type": "text", "placeholder": "Default input"}),
-            'catTypeSimpleCalc': Select(attrs={"class": "form-control", "type": "text", "placeholder": "Default input"}),
+            'catTypeSimpleCalc': Select(
+                attrs={"class": "form-control", "type": "text", "placeholder": "Default input"}),
             'carTypeMTSBUCalc': Select(attrs={"class": "form-control", "type": "text", "placeholder": "Default input"}),
         }

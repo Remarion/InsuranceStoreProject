@@ -3,29 +3,44 @@
 {% block content %}
 
     <h2>Розрахуйте вартість страхування свого авто</h2>
-    <div class="container card-body">
-        <form method="POST" class="post-form">
-            {% csrf_token %}
-            <div class="card-body">
-                <div class="row">
-                    <div class = "col col-md-4"><label>Місце реєстрації авто</label></div></br>
-                    <div class = "col col-md-4">{{ form.setlCalc }}</div>
-                </div>
-            </div>
-            <div class="card-body">
-                <div class="row">
-                    <div class = "col col-md-4"><label>Тип траспорного засобу</label></div></br>
-                    <div class = "col col-md-4">{{ form.catTypeSimpleCalc }}</div>
-                </div>
-            </div>
-            <div class="card-body">
-                <div class="row">
-                    <div class = "col col-md-4"><label>Об'єм двигуна</label></div></br>
-                    <div class = "col col-md-4">{{ form.carTypeMTSBUCalc }}</div>
-                </div>
-            </div>
-            <button type="submit" formmethod="post" class="save btn btn-primary btn-lg" style="background: #1d2124; margin-top: 40px">Розрахувати</button>
-        </form>
-    </div>
+    <form style="margin-top: 50px">
+
+        <div class="form-group">
+            <label for="exampleFormControlSelect1">Місце реєстрації авто</label>
+            <select class="form-control col-md-4" id="exampleFormControlSelect1">
+                <option></option>
+                {% for s in setl %}
+                    <option>{{ s }}</option>
+                {% endfor %}
+            </select>
+        </div>
+
+
+
+        <div class="form-group">
+            <label for="exampleFormControlSelect1">Тип автомобіля</label>
+            <select class="form-control col-md-4" id="exampleFormControlSelect1" onChange="window.document.location.href=this.options[this.selectedIndex].value;" value="GO">
+                <option value="#"></option>
+                {% for cartype in cartypes %}
+                    <option value="/ocv/{{ cartype.id }}">{{ cartype.carTypeSimple }}</option>
+                {% endfor %}
+            </select>
+        </div>
+
+        {% if cartypelabel %}
+         <div class="form-group">
+            <label for="exampleFormControlSelect1">{{ cartypelabel }}</label>
+            <select class="form-control col-md-4" id="exampleFormControlSelect1">
+                <option></option>
+                {% for car in cartypemtsbu %}
+                    <option>{{ car.carTypeKind }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        {% endif %}
+
+        <button type="submit" formmethod="post" class="save btn btn-primary btn-lg" style="background: #1d2124; margin-top: 40px">Розрахувати</button>
+
+    </form>
   
 {% endblock %}
