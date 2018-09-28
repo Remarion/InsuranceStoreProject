@@ -3,26 +3,57 @@
 {% block content %}
 
     <h2>Розрахуйте вартість страхування свого авто</h2>
+
+    <script type='text/javascript'>
+
+
+        $(document).ready(function(){
+            $('#typeSelect').change(function(){
+                 var type = $('#typeSelect').val();
+                 var setl = $('#setlSelect').val();
+
+                 location.href = 'http://127.0.0.1:8000/ocv/' + type +'/' + setl +'/';
+            })
+         });
+
+
+    </script>
+
     <form style="margin-top: 50px">
 
         <div class="form-group">
             <label for="exampleFormControlSelect1">Місце реєстрації авто</label>
-            <select class="form-control col-md-4" id="exampleFormControlSelect1">
-                <option></option>
-                {% for s in setl %}
-                    <option>{{ s }}</option>
-                {% endfor %}
+            <select class="form-control col-md-4" id="setlSelect" name="setlSelect">
+                <option value="0"></option>
+                    {% for s in setl %}
+                        {% if setlDefault %}
+                            {% if setlDefault.id == s.id %}
+                                <option selected value="{{ s.id }}">{{ s }}</option>
+                            {% else %}
+                                <option value="{{ s.id }}">{{ s }}</option>
+                            {% endif %}
+                        {% else %}
+                            <option value="{{ s.id }}">{{ s }}</option>
+                        {% endif %}
+                    {% endfor %}
             </select>
         </div>
 
 
-
         <div class="form-group">
             <label for="exampleFormControlSelect1">Тип автомобіля</label>
-            <select class="form-control col-md-4" id="exampleFormControlSelect1" onChange="window.document.location.href=this.options[this.selectedIndex].value;" value="GO">
-                <option value="#"></option>
+            <select class="form-control col-md-4" id="typeSelect" name = "typeSelect">
+                <option value="0"></option>
                 {% for cartype in cartypes %}
-                    <option value="/ocv/{{ cartype.id }}">{{ cartype.carTypeSimple }}</option>
+                    {% if typeDefault %}
+                        {% if typeDefault.id == cartype.id %}
+                            <option selected value="{{ cartype.id }}">{{ cartype.carTypeSimple }}</option>
+                        {% else %}
+                            <option value="{{ cartype.id }}">{{ cartype.carTypeSimple }}</option>
+                        {% endif %}
+                    {% else %}
+                         <option value="{{ cartype.id }}">{{ cartype.carTypeSimple }}</option>
+                    {% endif %}
                 {% endfor %}
             </select>
         </div>
