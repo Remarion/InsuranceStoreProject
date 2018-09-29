@@ -5,8 +5,6 @@
     <h2>Розрахуйте вартість страхування свого авто</h2>
 
     <script type='text/javascript'>
-
-
         $(document).ready(function(){
             $('#typeSelect').change(function(){
                  var type = $('#typeSelect').val();
@@ -14,9 +12,10 @@
 
                  location.href = 'http://127.0.0.1:8000/ocv/' + type +'/' + setl +'/';
             })
+            $('#calcbutton').click(function () {
+                $('#prices').show();
+            })
          });
-
-
     </script>
 
     <form style="margin-top: 50px">
@@ -70,8 +69,25 @@
         </div>
         {% endif %}
 
-        <button type="submit" formmethod="post" class="save btn btn-primary btn-lg" style="background: #1d2124; margin-top: 40px">Розрахувати</button>
+        <!--<button type="submit" formmethod="post" class="save btn btn-primary btn-lg" id = "calcbutton" style="background: #1d2124; margin-top: 20px">Розрахувати</button-->
 
     </form>
+
+    <button class="save btn btn-primary btn-lg" id = "calcbutton" style="background: #1d2124; margin-top: 20px">Розрахувати</button>
+
+    <div class = 'prices' style="margin-top: 20px" id = "prices">
+    <a href="#"> <div class="card w-75" id="card">
+      <div class="card-body">
+          <img src= '/static/imgs/unilogo.png' class= "float-left" width= "195" height= "42">
+          <h2 class="float-right">100 грн.</h2>
+      </div>
+    </div> </a>
+    <div class="card w-75" id="card">
+      <div class="card-body">
+          <img src='/static/imgs/unilogo.png' class= "float-left" width= "195" height= "42">
+          <h2 class="float-right">100 грн.</h2>
+      </div>
+    </div>
+    </div>
   
 {% endblock %}
