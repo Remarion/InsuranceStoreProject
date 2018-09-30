@@ -19,10 +19,12 @@
     </script>
 
     <form id="calcForm">
+        {% csrf_token %}
+        <div class="form-row">
+        <div class="form-group col-md-4">
 
-        <div class="form-group">
             <label for="exampleFormControlSelect1">Місце реєстрації авто</label>
-            <select class="form-control col-md-4" id="setlSelect" name="setlSelect">
+            <select class="form-control" id="setlSelect" name="setlSelect">
                 <option value="0"></option>
                     {% for s in setl %}
                         {% if setlDefault %}
@@ -36,12 +38,13 @@
                         {% endif %}
                     {% endfor %}
             </select>
+
         </div>
 
 
-        <div class="form-group">
+        <div class="form-group col-md-4">
             <label for="exampleFormControlSelect1">Тип автомобіля</label>
-            <select class="form-control col-md-4" id="typeSelect" name = "typeSelect">
+            <select class="form-control" id="typeSelect" name = "typeSelect">
                 <option value="0"></option>
                 {% for cartype in cartypes %}
                     {% if typeDefault %}
@@ -57,16 +60,23 @@
             </select>
         </div>
 
+
+
+        </div>
+
         {% if cartypelabel %}
-         <div class="form-group">
+
+         <div class="form-row">
+         <div class="form-group col-md-4">
             <label for="exampleFormControlSelect1">{{ cartypelabel }}</label>
-            <select class="form-control col-md-4" id="exampleFormControlSelect1">
+            <select class="form-control" id="exampleFormControlSelect1">
                 <option></option>
                 {% for car in cartypemtsbu %}
                     <option>{{ car.carTypeKind }}</option>
                 {% endfor %}
             </select>
         </div>
+         </div>
         {% endif %}
 
         <!--<button type="submit" formmethod="post" class="save btn btn-primary btn-lg" id = "calcbutton" style="background: #1d2124; margin-top: 20px">Розрахувати</button-->
