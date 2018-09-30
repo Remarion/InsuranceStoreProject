@@ -26,7 +26,8 @@
     }
 
     .navbar {
-        font-size: 1.5rem;
+        opacity:0.95; 
+        font-size: 1.07rem;
     }
 
     #card {
@@ -36,7 +37,9 @@
     #prices {
         display: none;
     }
-
+    #initialText{
+        margin-top: 40px;
+    }
 }
 @media screen and (max-device-width: 480px){
     body {
