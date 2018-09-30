@@ -37,7 +37,7 @@
     #prices {
         display: none;
     }
-    #initialText{
+    .initialText{
         margin-top: 40px;
     }
 }
