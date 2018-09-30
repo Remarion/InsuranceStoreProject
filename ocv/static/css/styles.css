@@ -4,6 +4,14 @@ body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    background-color: #c6c8ca;
+}
+
+#container {
+    background-color: #fefefe;
+    height: 800px;
+    padding: 40px;
+    box-shadow: #c6c8ca;
 }
 .bg-light{
     opacity:0.7;
