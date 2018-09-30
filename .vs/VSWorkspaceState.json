@@ -1,6 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\ocv",
+    "\\ocv\\static",
+    "\\ocv\\templates"
   ],
+  "SelectedNode": "\\ocv\\templates\\wrapper.html",
   "PreviewInSolutionExplorer": false
 }
