@@ -4,6 +4,8 @@
     <list default="true" id="3c463d75-985b-4b46-820e-4e2089a78ddf" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ocv/static/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/ocv/static/css/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ocv/templates/ocv/ocv_calc.html" beforeDir="false" afterPath="$PROJECT_DIR$/ocv/templates/ocv/ocv_calc.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ocv/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/ocv/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,8 +22,8 @@
       <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ocv/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="8" selection-start-line="8" selection-end-line="8" />
+            <state relative-caret-position="136">
+              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
               <folding>
                 <element signature="e#0#27#0" expanded="true" />
               </folding>
@@ -29,20 +31,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ocv_calc.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ocv_calc.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ocv/templates/ocv/ocv_calc.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1224">
-              <caret line="72" column="33" selection-start-line="72" selection-start-column="33" selection-end-line="72" selection-end-column="33" />
+            <state relative-caret-position="323">
+              <caret line="19" column="45" lean-forward="true" selection-start-line="19" selection-start-column="45" selection-end-line="19" selection-end-column="45" />
+              <folding>
+                <element signature="e#3153#3217#0#HTML" expanded="true" />
+                <element signature="e#3266#3290#0#HTML" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="styles.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="styles.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ocv/static/css/styles.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="60" column="28" lean-forward="true" selection-start-line="60" selection-start-column="28" selection-end-line="60" selection-end-column="28" />
+            <state relative-caret-position="187">
+              <caret line="20" column="8" lean-forward="true" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -86,10 +92,10 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ocv/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="32" column="56" selection-start-line="32" selection-start-column="56" selection-end-line="32" selection-end-column="56" />
+            <state relative-caret-position="459">
+              <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
               <folding>
-                <element signature="e#23#58#0" expanded="true" />
+                <element signature="e#23#72#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -120,12 +126,12 @@
         <option value="$PROJECT_DIR$/tourism/views.py" />
         <option value="$PROJECT_DIR$/tourism/urls.py" />
         <option value="$PROJECT_DIR$/ocv/urls.py" />
-        <option value="$PROJECT_DIR$/ocv/views.py" />
         <option value="$PROJECT_DIR$/ocv/templates/basic.html" />
         <option value="$PROJECT_DIR$/tourism/templates/tourism/tourism.html" />
-        <option value="$PROJECT_DIR$/ocv/templates/ocv/ocv_calc.html" />
         <option value="$PROJECT_DIR$/ocv/templates/wrapper.html" />
         <option value="$PROJECT_DIR$/ocv/static/css/styles.css" />
+        <option value="$PROJECT_DIR$/ocv/views.py" />
+        <option value="$PROJECT_DIR$/ocv/templates/ocv/ocv_calc.html" />
       </list>
     </option>
   </component>
@@ -243,7 +249,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1719" height="932" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50053304" side_tool="true" weight="0.26361656" />
@@ -313,7 +318,7 @@
         <state relative-caret-position="340">
           <caret line="22" selection-start-line="22" selection-end-line="22" />
           <folding>
-            <element signature="e#23#58#0" expanded="true" />
+            <element signature="e#23#72#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -358,7 +363,7 @@
         <state relative-caret-position="340">
           <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
           <folding>
-            <element signature="e#23#58#0" expanded="true" />
+            <element signature="e#23#72#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -396,7 +401,7 @@
         <state relative-caret-position="289">
           <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
           <folding>
-            <element signature="e#23#58#0" expanded="true" />
+            <element signature="e#23#72#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -440,7 +445,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <folding>
-            <element signature="e#23#58#0" expanded="true" />
+            <element signature="e#23#72#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -565,16 +570,6 @@
     <entry file="file://$PROJECT_DIR$/insurance_store/wsgi.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/ocv/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="32" column="56" selection-start-line="32" selection-start-column="56" selection-end-line="32" selection-end-column="56" />
-          <folding>
-            <element signature="e#23#58#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/insurance_store/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2108">
@@ -589,23 +584,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ocv/templates/ocv/ocv_calc.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1224">
-          <caret line="72" column="33" selection-start-line="72" selection-start-column="33" selection-end-line="72" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ocv/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-          <folding>
-            <element signature="e#0#27#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -625,8 +603,39 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ocv/static/css/styles.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="60" column="28" lean-forward="true" selection-start-line="60" selection-start-column="28" selection-end-line="60" selection-end-column="28" />
+        <state relative-caret-position="187">
+          <caret line="20" column="8" lean-forward="true" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ocv/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+          <folding>
+            <element signature="e#0#27#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ocv/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
+          <folding>
+            <element signature="e#23#72#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ocv/templates/ocv/ocv_calc.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="45" lean-forward="true" selection-start-line="19" selection-start-column="45" selection-end-line="19" selection-end-column="45" />
+          <folding>
+            <element signature="e#3153#3217#0#HTML" expanded="true" />
+            <element signature="e#3266#3290#0#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

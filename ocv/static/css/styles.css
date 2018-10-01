@@ -36,6 +36,7 @@
 
     #prices {
         display: none;
+        border-color: #1b1e21;
     }
     .initialText{
         margin-top: 40px;
@@ -75,6 +76,7 @@
 
     #prices {
         display: none;
+        border-color: #1b1e21;
     }
 
 }
