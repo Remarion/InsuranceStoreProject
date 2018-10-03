@@ -41,6 +41,9 @@
     .initialText{
         margin-top: 40px;
     }
+    #carTypeSelect {
+        display: none;
+    }
 }
 @media screen and (max-device-width: 480px){
     body {
@@ -77,6 +80,9 @@
     #prices {
         display: none;
         border-color: #1b1e21;
+    }
+    #carTypeSelect {
+        display: none;
     }
 
 }

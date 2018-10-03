@@ -10,17 +10,30 @@
                 var type = $('#typeSelect').val();
                 var setl = $('#setlSelect').val();
 
-                // location.href = 'http://127.0.0.1:8000/ocv/' + type +'/' + setl +'/';
+                //location.href = 'http://127.0.0.1:8000/ocv/' + type +'/' + setl +'/';
+                urlAJAX = 'http://127.0.0.1:8000/ocv/' + type +'/' + setl +'/';
+                 $.get(urlAJAX, function(response){
+                   result = JSON.parse(response);
 
-                var urlGet = 'http://127.0.0.1:8000/ocv/g' + type + '/' + setl +'/';
+                   if (result) {
+                       $('#carTypeSelect').show()
+                       $('#labelTypeSelect').empty();
+                       $('#labelTypeSelect').append($('<span>', {text: result.cartypelabel, }));
+                       $('#exampleFormControlSelect1').empty();
+                       $('#exampleFormControlSelect1').append($('<option>', {
+                                value: '0',
+                                text: '',
+                        }));
 
-                $.ajax({
-                    url: urlGet,
-                    type: 'POST',
-                    success: function(data) {
-                        console.log(data);
-                     }
-                });
+                       for(var i=0;i < result.item_list.length;i++){
+                            $('#exampleFormControlSelect1').append($('<option>', {
+                                value: result.item_list[i]['id'],
+                                text: result.item_list[i]['carTypeKind'],
+                        }))};
+                   }
+                  });
+
+
             })
             $('#calcbutton').click(function () {
                 $('#prices').show();
@@ -76,20 +89,19 @@
 
 
 
-         <div class="form-row">
+         <div class="form-row" id = "carTypeSelect">
          <div class="form-group col-md-4">
-            <label for="exampleFormControlSelect1">{{ cartypelabel }}</label>
+            <label for="exampleFormControlSelect1" id = "labelTypeSelect"></label>
             <select class="form-control" id="exampleFormControlSelect1">
                 <option></option>
-                {% for car in cartypemtsbu %}
-                    <option>{{ car.carTypeKind }}</option>
-                {% endfor %}
+
             </select>
         </div>
          </div>
 
 
-        <!--<button type="submit" formmethod="post" class="save btn btn-primary btn-lg" id = "calcbutton" style="background: #1d2124; margin-top: 20px">Розрахувати</button-->
+
+        <!-- cartypelabel<button type="submit" formmethod="post" class="save btn btn-primary btn-lg" id = "calcbutton" style="background: #1d2124; margin-top: 20px">Розрахувати</button-->
 
     </form>
 
