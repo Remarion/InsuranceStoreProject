@@ -4,5 +4,5 @@ from ocv import views
 
 urlpatterns = [
     url(r'^$', OCV_View.as_view(), name='ocvCalc'),
-    url(r'^(?P<cartype_id>[0-9]+)/(?P<setl_id>[0-9]+)/$', views.index, name='ocvCalcFull')
+    url(r'^(?P<cartype_id>[0-9]+)/$', views.index, name='ocvCalcFull')
 ]

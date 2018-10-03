@@ -11,12 +11,12 @@
                 var setl = $('#setlSelect').val();
 
                 //location.href = 'http://127.0.0.1:8000/ocv/' + type +'/' + setl +'/';
-                urlAJAX = 'http://127.0.0.1:8000/ocv/' + type +'/' + setl +'/';
+                urlAJAX = 'http://127.0.0.1:8000/ocv/' + type +'/';
                  $.get(urlAJAX, function(response){
                    result = JSON.parse(response);
 
                    if (result) {
-                       $('#carTypeSelect').show()
+                       $('#carTypeSelect').show();
                        $('#labelTypeSelect').empty();
                        $('#labelTypeSelect').append($('<span>', {text: result.cartypelabel, }));
                        $('#exampleFormControlSelect1').empty();
@@ -24,7 +24,6 @@
                                 value: '0',
                                 text: '',
                         }));
-
                        for(var i=0;i < result.item_list.length;i++){
                             $('#exampleFormControlSelect1').append($('<option>', {
                                 value: result.item_list[i]['id'],
@@ -32,8 +31,6 @@
                         }))};
                    }
                   });
-
-
             })
             $('#calcbutton').click(function () {
                 $('#prices').show();
