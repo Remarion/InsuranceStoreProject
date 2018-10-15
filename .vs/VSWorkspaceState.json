@@ -3,8 +3,9 @@
     "",
     "\\ocv",
     "\\ocv\\static",
-    "\\ocv\\templates"
+    "\\ocv\\templates",
+    "\\ocv\\templates\\ocv"
   ],
-  "SelectedNode": "\\ocv\\templates\\wrapper.html",
+  "SelectedNode": "\\ocv\\templates\\ocv\\ocv_calc.html",
   "PreviewInSolutionExplorer": false
 }

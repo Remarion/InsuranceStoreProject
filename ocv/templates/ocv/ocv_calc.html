@@ -4,39 +4,51 @@
 
      <h2 class="initialText">Розрахуйте вартість страхування свого авто</h2>
 
+    <!-- Скрипти------------------------------------------------------------ -->
     <script type='text/javascript'>
         $(document).ready(function(){
+            // Функція відображення select блоку з підтипом траспортного засобу
             $('#typeSelect').change(function(){
                 var type = $('#typeSelect').val();
-                var setl = $('#setlSelect').val();
-
+                //var setl = $('#setlSelect').val();
                 //location.href = 'http://127.0.0.1:8000/ocv/' + type +'/' + setl +'/';
                 urlAJAX = 'http://127.0.0.1:8000/ocv/' + type +'/';
                  $.get(urlAJAX, function(response){
-                   result = JSON.parse(response);
-
+                  result = JSON.parse(response);
                    if (result) {
-                       $('#carTypeSelect').show();
                        $('#labelTypeSelect').empty();
-                       $('#labelTypeSelect').append($('<span>', {text: result.cartypelabel, }));
                        $('#exampleFormControlSelect1').empty();
-                       $('#exampleFormControlSelect1').append($('<option>', {
-                                value: '0',
-                                text: '',
-                        }));
-                       for(var i=0;i < result.item_list.length;i++){
-                            $('#exampleFormControlSelect1').append($('<option>', {
-                                value: result.item_list[i]['id'],
-                                text: result.item_list[i]['carTypeKind'],
-                        }))};
+                       if (result.item_list.length == 0) {
+                           $('#carTypeSelect').hide();
+                       } else {
+                           $('#carTypeSelect').show();
+                           $('#labelTypeSelect').append($('<span>', {text: result.cartypelabel,}));
+                           $('#exampleFormControlSelect1').append($('<option>', {
+                               value: '0',
+                               text: '',
+                           }));
+                           for (var i = 0; i < result.item_list.length; i++) {
+                               $('#exampleFormControlSelect1').append($('<option>', {
+                                   value: result.item_list[i]['id'],
+                                   text: result.item_list[i]['carTypeKind'],
+                               }))
+                           }
+                           ;
+                       }
                    }
+
                   });
             })
+            /////////////////////////////////////////////////////////////////////
+
+            //Віддображення блоку з цінами та отримання даних про ціну
             $('#calcbutton').click(function () {
                 $('#prices').show();
             })
+            ////////////////////////////////////////////////////////////////////////
          });
     </script>
+    <!-- ------------------------------------------------------------------------------------- -->
 
     <form id="calcForm">
         {% csrf_token %}
@@ -65,7 +77,7 @@
         <div class="form-group col-md-4">
             <label for="exampleFormControlSelect1">Тип автомобіля</label>
             <select class="form-control" id="typeSelect" name = "typeSelect">
-                <option value="0"></option>
+                <option value="100"></option>
                 {% for cartype in cartypes %}
                     {% if typeDefault %}
                         {% if typeDefault.id == cartype.id %}
@@ -107,18 +119,35 @@
     <div class = 'prices' style="margin-top: 50px" id = "prices">
 
 
-          <div class="card w-100 shadow p-3 mb-5 bg-white rounded" id="card">
-              <div class="card-body">
-                  <img src= '/static/imgs/unilogo.png' class= "float-left" width= "195" height= "42">
-                  <h2 class="float-right">100 грн.</h2>
+        <div class="container shadow p-3 mb-5 bg-white rounded">
+              <div class="row">
+                <div class="col-sm">
+                  <img src= '/static/imgs/unilogo.png' class= "float-left" width= "195" height= "42" style="margin-left: 20px">
+                </div>
+                <div class="col-sm">
+                  <h2 class="float-right" style="margin-right: 70px">100 грн.</h2>
+                </div>
+                <div class="col-sm">
+                  <button type="button" class="btn btn-secondary btn-lg float-right" style="background: #1d2124">Продовжити</button>
+                </div>
               </div>
           </div>
-        <div class="card w-100 shadow p-3 mb-5 bg-white rounded" id="card">
-          <div class="card-body">
-              <img src='/static/imgs/unilogo.png' class= "float-left" width= "195" height= "42">
-              <h2 class="float-right">100 грн.</h2>
+
+        <div class="container shadow p-3 mb-5 bg-white rounded">
+              <div class="row">
+                <div class="col-sm">
+                  <img src= '/static/imgs/unilogo.png' class= "float-left" width= "195" height= "42" style="margin-left: 20px">
+                </div>
+                <div class="col-sm">
+                  <h2 class="float-right" style="margin-right: 70px">100 грн.</h2>
+                </div>
+                <div class="col-sm">
+                  <button type="button" class="btn btn-secondary btn-lg float-right" style="background: #1d2124">Продовжити</button>
+                </div>
+              </div>
           </div>
-        </div>
+
+
     </div>
   
 {% endblock %}

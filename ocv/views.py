@@ -22,10 +22,13 @@ class OCV_View(View):
 
 
 def index(request, cartype_id):
-    cartypemtsbu = CarTypeMTSBU.objects.filter(carTypeSimple__id=cartype_id)
-    cartypelabel = CarTypeLabel.objects.get(carTypeSimple__id=cartype_id)
     data = []
-    for cartype in cartypemtsbu:
-        data.append({'id': cartype.id, 'carTypeKind': cartype.carTypeKind})
-    response = {'item_list': data, 'cartypelabel': cartypelabel.carTypeLabel}
-    return HttpResponse(json.dumps(response))
+    if cartype_id != '100':
+        cartypemtsbu = CarTypeMTSBU.objects.filter(carTypeSimple__id=cartype_id)
+        cartypelabel = CarTypeLabel.objects.get(carTypeSimple__id=cartype_id)
+        for cartype in cartypemtsbu:
+            data.append({'id': cartype.id, 'carTypeKind': cartype.carTypeKind})
+        response = {'item_list': data, 'cartypelabel': cartypelabel.carTypeLabel}
+        return HttpResponse(json.dumps(response))
+    else:
+        return HttpResponse(json.dumps({'item_list': data}))
