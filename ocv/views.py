@@ -5,6 +5,7 @@ from django.views import View
 from .models import CarTypeSimple, CarTypeLabel, CarTypeMTSBU, Settlement
 from django.http import HttpResponse
 import json
+from django.views.decorators.csrf import csrf_exempt
 
 
 class Index(View):
@@ -32,3 +33,8 @@ def index(request, cartype_id):
         return HttpResponse(json.dumps(response))
     else:
         return HttpResponse(json.dumps({'item_list': data}))
+
+@csrf_exempt
+def prices(request):
+    price = '200 грн.'
+    return HttpResponse(json.dumps({'price': price}))

@@ -43,7 +43,35 @@
 
             //Віддображення блоку з цінами та отримання даних про ціну
             $('#calcbutton').click(function () {
-                $('#prices').show();
+                var type = $('#typeSelect').val();
+                var setl = $('#setlSelect').val();
+                var group = $('#exampleFormControlSelect1').val();
+                var urlPOST = 'http://127.0.0.1:8000/ocv/prices/';
+
+                 $.ajax({
+                         type:'POST',
+                         url:urlPOST,
+                         dataType: 'json',
+                         data: {
+                                'type': type,
+                                'setl': setl,
+                                'group': group,
+                                },
+                         success: function(response){
+                              //result1 = JSON.parse(response);
+                              $('#prices').show();
+                              $('#uniPrice').append($('<h2>',
+                                  {
+                                      text: response.price,
+                                      class: "float-right",
+                                      style: "margin-right: 70px",
+
+                                  }));
+                            },
+
+                    });
+
+
             })
             ////////////////////////////////////////////////////////////////////////
          });
@@ -110,7 +138,7 @@
 
 
 
-        <!-- cartypelabel<button type="submit" formmethod="post" class="save btn btn-primary btn-lg" id = "calcbutton" style="background: #1d2124; margin-top: 20px">Розрахувати</button-->
+        <!-- cartypelabel<button  formmethod="post" class="save btn btn-primary btn-lg" id = "calcbutton" style="background: #1d2124; margin-top: 20px">Розрахувати</button-->
 
     </form>
 
@@ -124,8 +152,8 @@
                 <div class="col-sm">
                   <img src= '/static/imgs/unilogo.png' class= "float-left" width= "195" height= "42" style="margin-left: 20px">
                 </div>
-                <div class="col-sm">
-                  <h2 class="float-right" style="margin-right: 70px">100 грн.</h2>
+                <div class="col-sm" id="uniPrice">
+                  <!--<h2 class="float-right" style="margin-right: 70px"></h2>-->
                 </div>
                 <div class="col-sm">
                   <button type="button" class="btn btn-secondary btn-lg float-right" style="background: #1d2124">Продовжити</button>
