@@ -6,6 +6,7 @@ from .models import CarTypeSimple, CarTypeLabel, CarTypeMTSBU, Settlement
 from django.http import HttpResponse
 import json
 from django.views.decorators.csrf import csrf_exempt
+from .api import getUniPrice
 
 
 class Index(View):
@@ -36,5 +37,9 @@ def index(request, cartype_id):
 
 @csrf_exempt
 def prices(request):
-    price = '200 грн.'
-    return HttpResponse(json.dumps({'price': price}))
+    if request.method == 'POST':
+        setl = Settlement.objects.get(pk=int(request.POST['setl']))
+        carType = CarTypeMTSBU.objects.get(pk=int(request.POST['group']))
+        price = getUniPrice(setl=setl.settlementMTSBUCode, carType=carType.carTypeMTSBU)
+        return HttpResponse(json.dumps({'price': price}))
+    return HttpResponse(json.dumps({'price': '0'}))

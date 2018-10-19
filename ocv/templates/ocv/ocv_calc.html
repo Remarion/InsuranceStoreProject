@@ -43,7 +43,6 @@
 
             //Віддображення блоку з цінами та отримання даних про ціну
             $('#calcbutton').click(function () {
-                var type = $('#typeSelect').val();
                 var setl = $('#setlSelect').val();
                 var group = $('#exampleFormControlSelect1').val();
                 var urlPOST = 'http://127.0.0.1:8000/ocv/prices/';
@@ -53,12 +52,10 @@
                          url:urlPOST,
                          dataType: 'json',
                          data: {
-                                'type': type,
                                 'setl': setl,
                                 'group': group,
                                 },
                          success: function(response){
-                              //result1 = JSON.parse(response);
                               $('#prices').show();
                               $('#uniPrice').append($('<h2>',
                                   {
