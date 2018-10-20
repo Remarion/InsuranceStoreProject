@@ -47,6 +47,7 @@
                 var group = $('#exampleFormControlSelect1').val();
                 var urlPOST = 'http://127.0.0.1:8000/ocv/prices/';
 
+
                  $.ajax({
                          type:'POST',
                          url:urlPOST,
@@ -55,15 +56,28 @@
                                 'setl': setl,
                                 'group': group,
                                 },
+
                          success: function(response){
                               $('#prices').show();
+                              $('#uniPrice').empty();
                               $('#uniPrice').append($('<h2>',
                                   {
-                                      text: response.price,
+                                      text: response.priceUni + ' грн.',
                                       class: "float-right",
                                       style: "margin-right: 70px",
+                                      value: response.priceUni,
 
                                   }));
+                              $('#tasPrice').empty();
+                              $('#tasPrice').append($('<h2>',
+                                  {
+                                      text: response.priceTas + ' грн.',
+                                      class: "float-right",
+                                      style: "margin-right: 70px",
+                                      value: response.priceTas,
+
+                                  }));
+
                             },
 
                     });
@@ -74,6 +88,7 @@
          });
     </script>
     <!-- ------------------------------------------------------------------------------------- -->
+
 
     <form id="calcForm">
         {% csrf_token %}
@@ -161,10 +176,9 @@
         <div class="container shadow p-3 mb-5 bg-white rounded">
               <div class="row">
                 <div class="col-sm">
-                  <img src= '/static/imgs/unilogo.png' class= "float-left" width= "195" height= "42" style="margin-left: 20px">
+                  <img src= '/static/imgs/taslogo.png' class= "float-left" width= "135" height= "42" style="margin-left: 20px">
                 </div>
-                <div class="col-sm">
-                  <h2 class="float-right" style="margin-right: 70px">100 грн.</h2>
+                <div class="col-sm" id="tasPrice">
                 </div>
                 <div class="col-sm">
                   <button type="button" class="btn btn-secondary btn-lg float-right" style="background: #1d2124">Продовжити</button>

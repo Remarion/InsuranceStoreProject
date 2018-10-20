@@ -12,3 +12,4 @@ def getUniPrice(setl, carType):
     r = requests.post(url=url, data=data, auth=(user, password,))
     m = r.json()
     return m['payment']
+

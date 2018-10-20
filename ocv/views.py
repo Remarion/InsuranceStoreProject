@@ -7,6 +7,7 @@ from django.http import HttpResponse
 import json
 from django.views.decorators.csrf import csrf_exempt
 from .api import getUniPrice
+import math
 
 
 class Index(View):
@@ -35,11 +36,14 @@ def index(request, cartype_id):
     else:
         return HttpResponse(json.dumps({'item_list': data}))
 
+
 @csrf_exempt
 def prices(request):
     if request.method == 'POST':
         setl = Settlement.objects.get(pk=int(request.POST['setl']))
         carType = CarTypeMTSBU.objects.get(pk=int(request.POST['group']))
-        price = getUniPrice(setl=setl.settlementMTSBUCode, carType=carType.carTypeMTSBU)
-        return HttpResponse(json.dumps({'price': price}))
-    return HttpResponse(json.dumps({'price': '0'}))
+        priceUni =getUniPrice(setl=setl.settlementMTSBUCode, carType=carType.carTypeMTSBU)
+        priceTas = str(round(float(priceUni)*0.7, 2))
+        print(priceTas)
+        return HttpResponse(json.dumps({'priceUni': priceUni, 'priceTas': priceTas}))
+    return HttpResponse(json.dumps({'priceUni': 0, 'priceTas': 0}))
