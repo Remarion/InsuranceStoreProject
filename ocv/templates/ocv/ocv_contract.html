@@ -1,0 +1,57 @@
+{% extends "wrapper.html" %}
+
+{% block content %}
+
+    <form style="margin-top: 50px" id="contractForm">
+
+        <div class="card">
+           <h5 class="card-header">
+                Дані договору
+           </h5>
+            <div class="card-body">
+                <div class="form-row">
+                 <div class="form-group col-md-4">
+                      <label for ="inputBeginDate" >Дата початку дії</label>
+                      <input type="date" class="form-control" id="inputBeginDate" placeholder="ДД.ММ.РРРР">
+                 </div>
+                <div class="form-group col-md-4">
+                      <label for ="inputEndDate" >Дата закінчення дії</label>
+                      <input type="date" class="form-control" id="inputEndDate" placeholder="ДД.ММ.РРРР">
+                 </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="card" style="margin-top: 15px">
+           <h5 class="card-header">
+                Дані про Вас
+           </h5>
+            <div class="card-body">
+
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                      <label for ="inputSurname" >Прізвище</label>
+                      <input type="text" class="form-control" id="inputSurname" placeholder="Прізвище">
+                    </div>
+                    <div class="form-group col-md-4">
+                          <label for="inputName">Ім'я</label>
+                          <input type="text" class="form-control" id="inputName" placeholder="Ім'я">
+                    </div>
+                    <div class="form-group col-md-4">
+                          <label for ="inputPatronymic" >По батькові</label>
+                          <input type="text" class="form-control" id="inputPatronymic" placeholder="По батькові">
+                    </div>
+                </div>
+                <div class="form-group">
+                        <label for="inputAddress">Адреса</label>
+                        <input type="text" class="form-control" id="inputAddress" placeholder="Введіть свою адресу">
+                </div>
+
+            </div>
+        </div>
+
+    </form>
+
+
+{% endblock %}

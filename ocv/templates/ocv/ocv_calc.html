@@ -47,7 +47,6 @@
                 var group = $('#exampleFormControlSelect1').val();
                 var urlPOST = 'http://127.0.0.1:8000/ocv/prices/';
 
-
                  $.ajax({
                          type:'POST',
                          url:urlPOST,
@@ -56,9 +55,9 @@
                                 'setl': setl,
                                 'group': group,
                                 },
-
                          success: function(response){
                               $('#prices').show();
+
                               $('#uniPrice').empty();
                               $('#uniPrice').append($('<h2>',
                                   {
@@ -66,8 +65,9 @@
                                       class: "float-right",
                                       style: "margin-right: 70px",
                                       value: response.priceUni,
-
+                                      id: "uniPriceValue",
                                   }));
+
                               $('#tasPrice').empty();
                               $('#tasPrice').append($('<h2>',
                                   {
@@ -75,7 +75,18 @@
                                       class: "float-right",
                                       style: "margin-right: 70px",
                                       value: response.priceTas,
-
+                                      id: "tasPriceValue",
+                                  }));
+                              $('#priceSettings').empty();
+                              $('#priceSettings').append($('<span>',
+                                  {
+                                      id: "setlSet",
+                                      value: setl,
+                                  }));
+                              $('#priceSettings').append($('<span>',
+                                  {
+                                      id: "groupSet",
+                                      value: group,
                                   }));
 
                             },
@@ -85,6 +96,31 @@
 
             })
             ////////////////////////////////////////////////////////////////////////
+            $('#tasCalcButton').click(function () {
+                var urlTAS = "http://127.0.0.1:8000/ocv/contract/";
+                var data = {
+                    'setl': $('#setlSet').attr('value'),
+                    'group': $('#groupSet').attr('value'),
+                    'price': $('#tasPriceValue').attr('value'),
+                    'inCompany': "tas",
+                    };
+                postAndRedirect(urlTAS, data);
+            })
+
+             $('#uniCalcButton').click(function () {
+                var urlUNI = "http://127.0.0.1:8000/ocv/contract/";
+                var setl = $('#setlSet').attr('value');
+                var group = $('#groupSet').attr('value');
+                var price = $('#uniPriceValue').attr('value');
+                var data = {
+                    'setl': setl,
+                    'group': group,
+                    'price': price,
+                    'inCompany': "uni",
+                    };
+                postAndRedirect(urlUNI, data);
+            })
+
          });
     </script>
     <!-- ------------------------------------------------------------------------------------- -->
@@ -157,18 +193,19 @@
     <button class="save btn btn-primary btn-lg" id = "calcbutton" style="background: #1d2124; margin-top: 20px; margin-left: 20px">Розрахувати</button>
 
     <div class = 'prices' style="margin-top: 50px" id = "prices">
+          <div id="priceSettings">
 
+          </div>
 
-        <div class="container shadow p-3 mb-5 bg-white rounded">
+          <div class="container shadow p-3 mb-5 bg-white rounded">
               <div class="row">
                 <div class="col-sm">
                   <img src= '/static/imgs/unilogo.png' class= "float-left" width= "195" height= "42" style="margin-left: 20px">
                 </div>
                 <div class="col-sm" id="uniPrice">
-                  <!--<h2 class="float-right" style="margin-right: 70px"></h2>-->
                 </div>
                 <div class="col-sm">
-                  <button type="button" class="btn btn-secondary btn-lg float-right" style="background: #1d2124">Продовжити</button>
+                  <button type="button" class="btn btn-secondary btn-lg float-right" style="background: #1d2124" id="uniCalcButton">Продовжити</button>
                 </div>
               </div>
           </div>
@@ -181,7 +218,7 @@
                 <div class="col-sm" id="tasPrice">
                 </div>
                 <div class="col-sm">
-                  <button type="button" class="btn btn-secondary btn-lg float-right" style="background: #1d2124">Продовжити</button>
+                  <button type="button" class="btn btn-secondary btn-lg float-right" style="background: #1d2124" id="tasCalcButton">Продовжити</button>
                 </div>
               </div>
           </div>

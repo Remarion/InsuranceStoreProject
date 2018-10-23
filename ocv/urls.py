@@ -6,4 +6,5 @@ urlpatterns = [
     url(r'^$', OCV_View.as_view(), name='ocvCalc'),
     url(r'^(?P<cartype_id>[0-9]+)/$', views.index, name='ocvCalcFull'),
     url(r'^prices/$', views.prices, name='getPrices'),
+    url(r'^contract/$', views.contractPageOpen, name='getContract'),
 ]
