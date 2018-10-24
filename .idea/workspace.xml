@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3c463d75-985b-4b46-820e-4e2089a78ddf" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/ocv/static/js/myjs.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ocv/templates/ocv/ocv_contract.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ocv/templates/ocv/ocv_calc.html" beforeDir="false" afterPath="$PROJECT_DIR$/ocv/templates/ocv/ocv_calc.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ocv/templates/wrapper.html" beforeDir="false" afterPath="$PROJECT_DIR$/ocv/templates/wrapper.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ocv/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/ocv/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ocv/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/ocv/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ocv/static/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/ocv/static/css/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ocv/templates/ocv/ocv_contract.html" beforeDir="false" afterPath="$PROJECT_DIR$/ocv/templates/ocv/ocv_contract.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -26,11 +21,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ocv/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="56" column="59" lean-forward="true" selection-start-line="56" selection-start-column="59" selection-end-line="56" selection-end-column="59" />
+            <state relative-caret-position="952">
+              <caret line="56" column="59" selection-start-line="56" selection-start-column="59" selection-end-line="56" selection-end-column="59" />
               <folding>
                 <element signature="e#24#69#0" expanded="true" />
               </folding>
@@ -50,20 +45,19 @@
       <file leaf-file-name="ocv_calc.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ocv/templates/ocv/ocv_calc.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="128" column="4" lean-forward="true" selection-start-line="128" selection-start-column="4" selection-end-line="128" selection-end-column="24" />
+            <state relative-caret-position="561">
+              <caret line="129" column="14" selection-start-line="129" selection-start-column="8" selection-end-line="129" selection-end-column="24" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ocv_contract.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ocv_contract.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ocv/templates/ocv/ocv_contract.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+            <state relative-caret-position="493">
+              <caret line="29" column="35" lean-forward="true" selection-start-line="29" selection-start-column="35" selection-end-line="29" selection-end-column="35" />
               <folding>
-                <element signature="e#61#85#0#HTML" expanded="true" />
-                <element signature="e#832#856#0#HTML" expanded="true" />
+                <element signature="e#893#917#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -77,6 +71,15 @@
               <folding>
                 <element signature="e#0#27#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="styles.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ocv/static/css/styles.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="992">
+              <caret line="91" lean-forward="true" selection-start-line="50" selection-end-line="91" />
             </state>
           </provider>
         </entry>
@@ -109,14 +112,14 @@
         <option value="$PROJECT_DIR$/tourism/urls.py" />
         <option value="$PROJECT_DIR$/ocv/templates/basic.html" />
         <option value="$PROJECT_DIR$/tourism/templates/tourism/tourism.html" />
-        <option value="$PROJECT_DIR$/ocv/static/css/styles.css" />
         <option value="$PROJECT_DIR$/ocv/api.py" />
         <option value="$PROJECT_DIR$/ocv/urls.py" />
         <option value="$PROJECT_DIR$/ocv/static/js/myjs.js" />
         <option value="$PROJECT_DIR$/ocv/templates/wrapper.html" />
         <option value="$PROJECT_DIR$/ocv/templates/ocv/ocv_calc.html" />
-        <option value="$PROJECT_DIR$/ocv/templates/ocv/ocv_contract.html" />
         <option value="$PROJECT_DIR$/ocv/views.py" />
+        <option value="$PROJECT_DIR$/ocv/static/css/styles.css" />
+        <option value="$PROJECT_DIR$/ocv/templates/ocv/ocv_contract.html" />
       </list>
     </option>
   </component>
@@ -129,7 +132,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-18" />
     <option name="width" value="1404" />
     <option name="height" value="1008" />
@@ -164,6 +167,13 @@
               <item name="insurance_store" type="462c0819:PsiDirectoryNode" />
               <item name="ocv" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="insurance_store" type="b2602c69:ProjectViewProjectNode" />
+              <item name="insurance_store" type="462c0819:PsiDirectoryNode" />
+              <item name="ocv" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="insurance_store" type="b2602c69:ProjectViewProjectNode" />
@@ -218,7 +228,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.api">
+  <component name="RunManager" selected="JavaScript Debug.ocv_contract.html">
+    <configuration name="ocv_contract.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/insurance_store/ocv/templates/ocv/ocv_contract.html" />
     <configuration name="api" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="insurance_store" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -263,9 +274,11 @@
     <list>
       <item itemvalue="Django server.insurance_store" />
       <item itemvalue="Python.api" />
+      <item itemvalue="JavaScript Debug.ocv_contract.html" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.ocv_contract.html" />
         <item itemvalue="Python.api" />
       </list>
     </recent_temporary>
@@ -293,8 +306,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="-6" width="1719" height="932" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32957393" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50053304" side_tool="true" weight="0.26361656" />
@@ -302,14 +314,14 @@
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32957393" />
       <window_info anchor="bottom" id="Python Console" order="7" weight="0.32957393" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32957393" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49946696" visible="true" weight="0.25814536" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22369212" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" sideWeight="0.49946696" visible="true" weight="0.21895425" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22814499" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="right" id="SciView" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39978212" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -331,13 +343,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ocv/templates/ocv/ocv_calc.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="54" selection-start-line="22" selection-start-column="54" selection-end-line="22" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ocv/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="663">
@@ -556,13 +561,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ocv/static/css/styles.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1377">
-          <caret line="81" column="30" selection-start-line="81" selection-start-column="30" selection-end-line="81" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/insurance_store/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -583,23 +581,6 @@
     <entry file="file://$PROJECT_DIR$/ocv/static/js/jquery-3.3.1.min.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/ocv/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="8" column="68" selection-start-line="8" selection-start-column="68" selection-end-line="8" selection-end-column="68" />
-          <folding>
-            <element signature="e#0#27#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ocv/static/js/myjs.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="24" selection-start-column="9" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ocv/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="481">
@@ -614,13 +595,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ocv/templates/wrapper.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="86" selection-start-line="24" selection-start-column="86" selection-end-line="24" selection-end-column="86" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://D:/install/Python/Lib/site-packages/simplejson/decoder.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="449">
@@ -628,30 +602,87 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ocv/templates/ocv/ocv_calc.html">
+    <entry file="file://$PROJECT_DIR$/ocv/static/js/myjs.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="128" column="4" lean-forward="true" selection-start-line="128" selection-start-column="4" selection-end-line="128" selection-end-column="24" />
+        <state>
+          <caret column="24" selection-start-column="9" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ocv/templates/ocv/ocv_contract.html">
+    <entry file="file://$PROJECT_DIR$/ocv/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+        <state relative-caret-position="102">
+          <caret line="8" column="68" selection-start-line="8" selection-start-column="68" selection-end-line="8" selection-end-column="68" />
           <folding>
-            <element signature="e#61#85#0#HTML" expanded="true" />
-            <element signature="e#832#856#0#HTML" expanded="true" />
+            <element signature="e#0#27#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ocv/templates/wrapper.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="86" selection-start-line="24" selection-start-column="86" selection-end-line="24" selection-end-column="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://DjangoModelDependency/#insurance_store">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>DjangoModelDependency</ID>
+          <OriginalElement>#insurance_store</OriginalElement>
+          <nodes>
+            <node x="" y="">ocv.models.Settlement</node>
+            <node x="" y="">ocv.models.CarModel</node>
+            <node x="" y="">ocv.models.CarBrand</node>
+            <node x="" y="">ocv.models.ContractOCV</node>
+            <node x="" y="">ocv.models.CarTypeMTSBU</node>
+            <node x="" y="">ocv.models.CarTypeLabel</node>
+            <node x="" y="">ocv.models.PriceOCV</node>
+            <node x="" y="">ocv.models.InsuranceCompany</node>
+            <node x="" y="">ocv.models.Zone</node>
+            <node x="" y="">ocv.models.CalculationOCV</node>
+            <node x="" y="">ocv.models.CarTypeSimple</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="312.0" y="173.0" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ocv/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="56" column="59" lean-forward="true" selection-start-line="56" selection-start-column="59" selection-end-line="56" selection-end-column="59" />
+        <state relative-caret-position="952">
+          <caret line="56" column="59" selection-start-line="56" selection-start-column="59" selection-end-line="56" selection-end-column="59" />
           <folding>
             <element signature="e#24#69#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ocv/static/css/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="992">
+          <caret line="91" lean-forward="true" selection-start-line="50" selection-end-line="91" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ocv/templates/ocv/ocv_calc.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="129" column="14" selection-start-line="129" selection-start-column="8" selection-end-line="129" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ocv/templates/ocv/ocv_contract.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" column="35" lean-forward="true" selection-start-line="29" selection-start-column="35" selection-end-line="29" selection-end-column="35" />
+          <folding>
+            <element signature="e#893#917#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>

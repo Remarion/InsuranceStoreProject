@@ -2,8 +2,8 @@
 
 {% block content %}
 
-    <form style="margin-top: 50px" id="contractForm">
-
+    <form id="contractForm">
+        {% csrf_token %}
         <div class="card">
            <h5 class="card-header">
                 Дані договору
