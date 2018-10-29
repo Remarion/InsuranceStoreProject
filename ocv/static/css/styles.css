@@ -16,7 +16,8 @@
 
     #container {
         background-color: #fefefe;
-        height: 800px;
+        min-height: revert;
+        height: auto;
         padding: 40px;
         box-shadow: #c6c8ca;
     }
@@ -26,8 +27,8 @@
     }
 
     .navbar {
-        opacity:0.98; 
-        font-size: 1.07rem;
+        opacity:1;
+        font-size: 1.2rem;
     }
 
     #card {
@@ -46,6 +47,23 @@
     }
     #contractForm {
         margin-top: 50px;
+        font-size: 1.15rem;
+    }
+    #cardContact {
+
+    }
+    #cardContactHeader {
+        background-color: rgba(11, 32, 33, 0.12);
+    }
+    #cardContractBody {
+        background-color: rgba(226, 227, 229, 0.12);
+    }
+    #ajaxLoader {
+        margin-top: 20px;
+        display: none;
+        text-align: center;
+        padding: 20px;
+        width: 300px;
     }
 }
 @media screen and (max-device-width: 480px){
@@ -61,10 +79,11 @@
             margin-top: 50px;
         }
     #container {
+        min-height: revert;
         margin-top: 50px;
         padding-top: 30px;
         background-color: #fefefe;
-        height: 1000px;
+        height: auto;
         box-shadow: #c6c8ca;
     }
 
@@ -73,7 +92,7 @@
     }
 
     .navbar {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
 
     #card {
@@ -86,6 +105,20 @@
     }
     #carTypeSelect {
         display: none;
+    }
+    #cardContact {
+
+    }
+    #cardContactHeader {
+        background-color: rgba(11, 32, 33, 0.09);
+    }
+    #cardContractBody {
+        background-color: rgba(226, 227, 229, 0.12);
+    }
+    #ajaxLoader {
+        display: none;
+        text-align: center;
+        padding: 20px;
     }
 }
 

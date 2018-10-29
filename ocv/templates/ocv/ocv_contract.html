@@ -4,11 +4,11 @@
 
     <form id="contractForm">
         {% csrf_token %}
-        <div class="card">
-           <h5 class="card-header">
+        <div class="card shadow" id="cardContact">
+           <h5 class="card-header" id="cardContactHeader">
                 Дані договору
            </h5>
-            <div class="card-body">
+            <div class="card-body" id="cardContractBody">
                 <div class="form-row">
                  <div class="form-group col-md-4">
                       <label for ="inputBeginDate" >Дата початку дії</label>
@@ -23,11 +23,11 @@
         </div>
 
 
-        <div class="card" style="margin-top: 15px">
-           <h5 class="card-header">
+        <div class="card shadow" style="margin-top: 15px" id="cardContact">
+           <h5 class="card-header" id="cardContactHeader">
                 Дані про Вас
            </h5>
-            <div class="card-body">
+            <div class="card-body" id="cardContractBody">
 
                 <div class="form-row">
                     <div class="form-group col-md-4">
@@ -47,9 +47,61 @@
                         <label for="inputAddress">Адреса</label>
                         <input type="text" class="form-control" id="inputAddress" placeholder="Введіть свою адресу">
                 </div>
+                 <div class="form-row">
+                    <div class="form-group col-md-4">
+                      <label for ="inputBithday" >Дата народження</label>
+                      <input type="date" class="form-control" id="inputBithday" placeholder="дд.мм.рррр">
+                    </div>
+                    <div class="form-group col-md-4">
+                          <label for="inputTelefon">Телефон</label>
+                          <input type="tel" class="form-control" id="inputTelefon" placeholder="(000)000-00-00">
+                    </div>
+                    <div class="form-group col-md-4">
+                          <label for ="exampleInputEmail1">Електронна адреса</label>
+                          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                    </div>
+                </div>
 
             </div>
         </div>
+
+
+        <div class="card shadow" id="cardContact" style="margin-top: 15px">
+           <h5 class="card-header" id="cardContactHeader">
+                Дані Вашого авто
+           </h5>
+            <div class="card-body" id="cardContractBody">
+                <div class="form-row">
+                 <div class="form-group col-md-4">
+                      <label for ="markSelect" >Марка Вашого авто</label>
+                      <select class="form-control" id="markSelect">
+                          <option value="0"></option>
+                      </select>
+                 </div>
+                    <div class="form-group col-md-4">
+                      <label for ="modelSelect" >Модель авто</label>
+                      <select class="form-control" id="modelSelect">
+                          <option value="0"></option>
+                      </select>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for ="inputCarYear" >Рік випуску</label>
+                        <input type="text" class="form-control" id="inputCarYear" placeholder="Рік випуску">
+                    </div>
+
+                </div>
+                <div class="form-row">
+                     <div class="form-group col-md-12">
+                        <button type="button" class="btn btn-secondary btn-lg float-right shadow"
+                                style="background: #1d2124; margin-top: 30px; margin-right: 40px; width: 200px"
+                                            id="ContactButton">Оформити</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
 
     </form>
 

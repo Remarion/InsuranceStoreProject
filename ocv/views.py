@@ -7,6 +7,7 @@ from django.http import HttpResponse, HttpResponseRedirect
 import json
 from django.views.decorators.csrf import csrf_exempt
 from .api import getUniPrice
+import time
 
 
 class Index(View):
@@ -43,6 +44,7 @@ def prices(request):
         carType = CarTypeMTSBU.objects.get(pk=int(request.POST['group']))
         priceUni = getUniPrice(setl=setl.settlementMTSBUCode, carType=carType.carTypeMTSBU)
         priceTas = str(round(float(priceUni) * 0.7, 2))
+        time.sleep(3)
         return HttpResponse(json.dumps({'priceUni': priceUni, 'priceTas': priceTas}))
     return HttpResponse(json.dumps({'priceUni': 0, 'priceTas': 0}))
 

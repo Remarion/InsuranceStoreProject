@@ -4,6 +4,8 @@
 
      <h2 class="initialText">Розрахуйте вартість страхування свого авто</h2>
 
+
+
     <!-- Скрипти------------------------------------------------------------ -->
     <script type='text/javascript'>
         $(document).ready(function(){
@@ -46,6 +48,7 @@
                 var setl = $('#setlSelect').val();
                 var group = $('#exampleFormControlSelect1').val();
                 var urlPOST = 'http://127.0.0.1:8000/ocv/prices/';
+                $('#ajaxLoader').show();
 
                  $.ajax({
                          type:'POST',
@@ -59,21 +62,21 @@
                               $('#prices').show();
 
                               $('#uniPrice').empty();
-                              $('#uniPrice').append($('<h2>',
+                              $('#uniPrice').append($('<h3>',
                                   {
                                       text: response.priceUni + ' грн.',
                                       class: "float-right",
-                                      style: "margin-right: 70px",
+                                      style: "margin-right: 40px",
                                       value: response.priceUni,
                                       id: "uniPriceValue",
                                   }));
 
                               $('#tasPrice').empty();
-                              $('#tasPrice').append($('<h2>',
+                              $('#tasPrice').append($('<h3>',
                                   {
                                       text: response.priceTas + ' грн.',
                                       class: "float-right",
-                                      style: "margin-right: 70px",
+                                      style: "margin-right: 40px",
                                       value: response.priceTas,
                                       id: "tasPriceValue",
                                   }));
@@ -88,6 +91,7 @@
                                       id: "groupSet",
                                       value: group,
                                   }));
+                             $('#ajaxLoader').hide()
 
                             },
 
@@ -125,9 +129,9 @@
     </script>
     <!-- ------------------------------------------------------------------------------------- -->
 
-
     <form id="calcForm">
         {% csrf_token %}
+
         <div class="form-row">
         <div class="form-group col-md-4">
 
@@ -185,12 +189,20 @@
          </div>
 
 
-
         <!-- cartypelabel<button  formmethod="post" class="save btn btn-primary btn-lg" id = "calcbutton" style="background: #1d2124; margin-top: 20px">Розрахувати</button-->
 
     </form>
 
     <button class="save btn btn-primary btn-lg" id = "calcbutton" style="background: #1d2124; margin-top: 20px; margin-left: 20px">Розрахувати</button>
+
+     <div class="row" id="output">
+
+        <div class="col-md-12" id="ajaxLoader" >
+            <h3>Ми шукаємо для Вас найкращу пропозицію</h3>
+            <img src= '/static/imgs/ajax-loader.gif' alt="loading" style="margin-top: 10px"/>
+        </div>
+
+    </div>
 
     <div class = 'prices' style="margin-top: 50px" id = "prices">
           <div id="priceSettings">
@@ -202,6 +214,12 @@
                 <div class="col-sm">
                   <img src= '/static/imgs/unilogo.png' class= "float-left" width= "195" height= "42" style="margin-left: 20px">
                 </div>
+                  <div class="col-sm">
+                      <ul class="float-left" style="padding-left: 25px">
+                          <li><h6>Франшиза - 1000 грн.</h6></li>
+                          <li><h6>Пряме врегулювання</h6></li>
+                      </ul>
+                  </div>
                 <div class="col-sm" id="uniPrice">
                 </div>
                 <div class="col-sm">
@@ -215,6 +233,11 @@
                 <div class="col-sm">
                   <img src= '/static/imgs/taslogo.png' class= "float-left" width= "135" height= "42" style="margin-left: 20px">
                 </div>
+                  <div class="col-sm">
+                    <ul class="float-left" style="padding-left: 25px">
+                          <li><h6>Франшиза - 2000 грн.</h6></li>
+                      </ul>
+                  </div>
                 <div class="col-sm" id="tasPrice">
                 </div>
                 <div class="col-sm">
@@ -222,6 +245,10 @@
                 </div>
               </div>
           </div>
+
+        <div style="padding: 20px">
+            <span></span>
+        </div>
 
 
     </div>
