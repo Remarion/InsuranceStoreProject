@@ -7,7 +7,7 @@
         -o-background-size: cover;
         background-size: cover;
         background-color: #c6c8ca;
-    }
+           }
 
     #calcForm {
         margin-top: 50px;
@@ -15,9 +15,9 @@
     }
 
     #container {
-        background-color: #fefefe;
-        min-height: revert;
-        height: auto;
+        background-color: #ffffff;
+        min-height: 100vh;
+        height: max-content;
         padding: 40px;
         box-shadow: #c6c8ca;
     }
@@ -65,6 +65,32 @@
         padding: 20px;
         width: 300px;
     }
+    #carouselImage {
+        height: 600px;
+    }
+    #carousel {
+        margin-top: 23px;
+        height: 600px;
+    }
+    #iconBlock {
+        margin-top: 30px;
+        padding: 30px;
+    }
+    #iconBlockOne {
+        border: none;
+        width: 80%;
+        height: 80%;
+
+    }
+    #iconImage {
+        width: 60%;
+        height: 60%;
+        align-self: center;
+    }
+    #iconText {
+        font-size: 0.9rem;
+        text-align: center;
+    }
 }
 @media screen and (max-device-width: 480px){
     body {
@@ -79,7 +105,7 @@
             margin-top: 50px;
         }
     #container {
-        min-height: revert;
+        min-height: 100vh;
         margin-top: 50px;
         padding-top: 30px;
         background-color: #fefefe;
@@ -119,6 +145,23 @@
         display: none;
         text-align: center;
         padding: 20px;
+    }
+   #iconBlock {
+        margin-top: 30px;
+        padding: 15px;
+        margin-left: 40px;
+    }
+    #iconBlockOne {
+        border: none;
+        width: 80%;
+        height: 80%;
+        align-self: center;
+
+    }
+    #iconImage {
+        width: 70%;
+        height: 70%;
+        align-self: center;
     }
 }
 
