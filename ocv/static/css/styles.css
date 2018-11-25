@@ -1,4 +1,4 @@
-@media screen and (min-device-width: 481px){
+@media screen and (min-device-width: 481px) {
 
     body {
         background: no-repeat center center fixed;
@@ -7,10 +7,10 @@
         -o-background-size: cover;
         background-size: cover;
         background-color: #c6c8ca;
-           }
+    }
 
     #calcForm {
-        margin-top: 50px;
+        margin-top: 30px;
         margin-left: 20px
     }
 
@@ -27,7 +27,7 @@
     }
 
     .navbar {
-        opacity:1;
+        opacity: 1;
         font-size: 1.2rem;
     }
 
@@ -39,25 +39,32 @@
         display: none;
         border-color: #1b1e21;
     }
-    .initialText{
+
+    .initialText {
         margin-top: 40px;
     }
+
     #carTypeSelect {
         display: none;
     }
+
     #contractForm {
         margin-top: 50px;
         font-size: 1.15rem;
     }
+
     #cardContact {
 
     }
+
     #cardContactHeader {
         background-color: rgba(11, 32, 33, 0.12);
     }
+
     #cardContractBody {
         background-color: rgba(226, 227, 229, 0.12);
     }
+
     #ajaxLoader {
         margin-top: 20px;
         display: none;
@@ -65,33 +72,40 @@
         padding: 20px;
         width: 300px;
     }
+
     #carouselImage {
         height: 600px;
     }
+
     #carousel {
         margin-top: 23px;
         height: 600px;
     }
+
     #iconBlock {
         margin-top: 30px;
         padding: 30px;
     }
+
     #iconBlockOne {
         border: none;
         width: 80%;
         height: 80%;
 
     }
+
     #iconImage {
         width: 60%;
         height: 60%;
         align-self: center;
     }
+
     #iconText {
         font-size: 0.9rem;
         text-align: center;
     }
 }
+
 @media screen and (max-device-width: 480px){
     body {
         background: no-repeat center center fixed;
