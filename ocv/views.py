@@ -51,7 +51,7 @@ def prices(request):
 
 @csrf_exempt
 def contractPageOpen(request):
-    setl = Settlement.objects.get(pk=int(request.POST['setl']))
+    setl = Settlement.objects.get(pk=int(request.POST['setl'))
     carType = CarTypeMTSBU.objects.get(pk=int(request.POST['group']))
     price = request.POST['price']
     sk = request.POST['inCompany']
